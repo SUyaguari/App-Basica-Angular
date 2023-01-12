@@ -1,0 +1,22 @@
+.lista{
+    list-style: none;
+}
+
+.horizontal{
+    display: flex;
+    align-content: space-around;
+    float:left;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.bajar{
+    margin-top: 10px;
+}
+
+.item{
+    list-style: none;
+    line-height: 40px;
+    margin: 0px 5px;
+}

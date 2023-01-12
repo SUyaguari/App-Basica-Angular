@@ -1,0 +1,75 @@
+<!--<nav class="navbar navbar-light" style="background-color: #e37615;">
+  <div class="container-fluid">
+    
+    <div class="horizontal">
+      <a href="cargar">
+        
+      </a>
+      <h1 class="bajar">
+        Los  registritos 📚
+      </h1>
+    </div>
+    <ul class="horizontal bajar">
+      <li class="item">
+        <button type="button" class="btn btn-secondary" (click)="inicio()">home</button>
+      </li>
+  </ul>
+  </div>
+  
+</nav>
+<router-outlet>
+
+</router-outlet>
+-->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br>
+      <hr>
+      <h2>Ingreso datos</h2>
+      <hr>
+      <form class ="forms-sample">
+        <div class="form-group">
+          <label for="txtCedula" >Cédula</label>
+          <input class="form-control" type="text" id="txtCedula" name="txtCedula" [(ngModel)]="registrito.cedula">
+      </div>
+      <div class="form-group">
+          <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
+          <input type="text" class="form-control" id="txtNombre" name="txtNombre" [(ngModel)]="registrito.nombre">
+      </div>
+      <div class="form-group">
+          <label for="txtCorreo" class="col-sm-2 col-form-label">Correo</label>
+          <input type="text" class="form-control" id="txtCorreo" name="txtCorreo" [(ngModel)]="registrito.correo">
+      </div>
+      <div class="form-group">
+          <label for="txtDireccion" class="col-sm-2 col-form-label">Dirección</label>
+          <input type="text" class="form-control" id="txtDireccion" name="txtDireccion" [(ngModel)]="registrito.direccion">
+      </div>
+      <br>
+      <button type="button" class="btn btn-primary" (click)="enviar()">Registrar</button>
+      </form>
+      <hr>
+  </div>
+
+  </div>
+  <h2>Registros</h2>
+  <hr>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Cédula</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Dirección</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let modelo of vector">
+            <td scope="row">{{modelo.cedula}}</td>
+            <td>{{modelo.nombre}}</td>
+            <td>{{modelo.correo}}</td>
+            <td>{{modelo.direccion}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
